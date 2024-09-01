@@ -1,0 +1,31 @@
+# models:
+#   PaymentRequest:
+#     id: id
+#     name: string
+#     status: tinyinteger
+#     created_by: string
+#     updated_by: string
+#     deleted_by: string
+#     timestamps: true
+#     softdeletes: true
+
+# controllers:
+#   PaymentRequestController:
+#     resource: index, create,  store, show, edit, update, destroy
+#     index:
+#       query: all
+#       render: backEnd.paymentRequest.index with:paymentRequests
+#     create:
+#       render: backEnd.paymentRequest.create
+#     store:
+#       validate: name
+#       redirect: paymentRequest.index
+#     show:
+#       respond: backEnd.paymentRequest.show with:paymentRequests
+#     edit:
+#       render: backEnd.paymentRequest.edit with:paymentRequests
+#     update:
+#       redirect: paymentRequest.index
+#     destroy:
+#       delete: paymentRequest
+#       redirect: paymentRequest.index
